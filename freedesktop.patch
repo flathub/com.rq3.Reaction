@@ -1,13 +1,12 @@
-From 8d4bfdcfeccc2a79d0a47c9f02dd045a35845a3c Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?= <matthias@mailaender.name>
+From eb42206b08b6185c997d0ecbbe52eba46b34eb7c Mon Sep 17 00:00:00 2001
 Date: Wed, 9 Aug 2023 19:09:08 +0200
 Subject: [PATCH] Add FreeDesktop.org metadata.
 
 ---
  com.rq3.Reaction.desktop      |   7 ++++++
- com.rq3.Reaction.metainfo.xml |  40 ++++++++++++++++++++++++++++++++++
+ com.rq3.Reaction.metainfo.xml |  41 ++++++++++++++++++++++++++++++++++
  com.rq3.Reaction.png          | Bin 0 -> 18302 bytes
- 3 files changed, 47 insertions(+)
+ 3 files changed, 48 insertions(+)
  create mode 100644 com.rq3.Reaction.desktop
  create mode 100644 com.rq3.Reaction.metainfo.xml
  create mode 100644 com.rq3.Reaction.png
@@ -27,17 +26,17 @@ index 00000000..b0a349cf
 +Icon=com.rq3.Reaction
 diff --git a/com.rq3.Reaction.metainfo.xml b/com.rq3.Reaction.metainfo.xml
 new file mode 100644
-index 00000000..0df545db
+index 00000000..a01c104a
 --- /dev/null
 +++ b/com.rq3.Reaction.metainfo.xml
-@@ -0,0 +1,40 @@
+@@ -0,0 +1,41 @@
 +<?xml version='1.0' encoding='utf-8'?>
 +<component type="desktop">
 +  <!--Created with jdAppStreamEdit 7.0-->
 +  <id>com.rq3.Reaction</id>
 +  <name>Reaction</name>
 +  <summary>Movie realism first-person-shooter</summary>
-+  <developer_name></developer_name>
++  <developer_name>Headshot</developer_name>
 +  <metadata_license>CC0-1.0</metadata_license>
 +  <project_license>GPL-2.0</project_license>
 +  <description>
@@ -70,6 +69,7 @@ index 00000000..0df545db
 +    <content_attribute id="social-chat">intense</content_attribute>
 +    <content_attribute id="social-audio">intense</content_attribute>
 +  </content_rating>
++  <launchable type="desktop-id">com.rq3.Reaction.desktop</launchable>
 +</component>
 diff --git a/com.rq3.Reaction.png b/com.rq3.Reaction.png
 new file mode 100644
