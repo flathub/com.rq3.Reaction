@@ -1,6 +1,6 @@
 app-id: com.rq3.Reaction
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: Reaction
 finish-args:
@@ -25,18 +25,20 @@ modules:
       - mv ${FLATPAK_DEST}/bin/Reactionded.* ${FLATPAK_DEST}/bin/Reactionded
       - mv ${FLATPAK_DEST}/bin/Reaction.* ${FLATPAK_DEST}/bin/Reaction
       - mv ${FLATPAK_DEST}/bin/*.so ${FLATPAK_DEST}/share/Reaction/
-      - install -Dm644 ${FLATPAK_ID}.png ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/${FLATPAK_ID}.png
-      - install -Dm644 ${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
-      - install -Dm644 ${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 ${FLATPAK_ID}.png -t ${FLATPAK_DEST}/share/icons/hicolor/512x512/apps/
+      - install -Dm644 ${FLATPAK_ID}.desktop -t ${FLATPAK_DEST}/share/applications/
+      - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/
     sources:
       - type: git
         url: https://github.com/ReactionQuake3/reaction.git
-        tag: d214682124851c5fb4a1f7f254305ccfcec7bffc
+        commit: d214682124851c5fb4a1f7f254305ccfcec7bffc
       - type: patch
-        path: resync.patch
+        path: patches/resync.patch
       - type: patch
-        path: freedesktop.patch
+        path: patches/freedesktop.patch
         use-git: true
+      - type: patch
+        path: patches/fix-constexpr-error.patch
 
   - name: boomstick
     buildsystem: simple
