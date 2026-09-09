@@ -1,6 +1,6 @@
 app-id: com.rq3.Reaction
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: Reaction
 finish-args:
@@ -12,7 +12,6 @@ finish-args:
   - --persist=.Reaction
 
 modules:
-  - shared-modules/glu/glu-9.json
   - shared-modules/SDL/sdl12-compat.json
 
   - name: reaction
@@ -49,3 +48,5 @@ modules:
       - type: archive
         url: https://download.rq3.com/Reaction-1.0-Linux-x86_64.tar.gz
         sha256: 6520e81052c30a1433c5b50e0e738ca620d7adb475ac3c1ee526f06fb03cc6d3
+        mirror-urls:
+          - https://www.yakusha.net/wp-content/uploads/2026/09/Reaction-1.0-Linux-x86_64.tar.gz
